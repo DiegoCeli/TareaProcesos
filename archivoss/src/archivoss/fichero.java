@@ -39,6 +39,7 @@ public class fichero {
     //Constructor de clase
     public fichero(){}
 
+    // constructor de la clase fichero
     public fichero(JTextField cedula , JTextField nombre, JTextField apellido , JTextField edad, JTextField fecha , JTextField sexo)
     {
         this.cedula = cedula;
@@ -60,7 +61,7 @@ public class fichero {
     }
 
     /* Abre la cja de dialogo Guardar como
-        Input: String de la forma "campo1,campo2,campo3"
+        Input: String de la forma "campo1,campo2,campo2, campo3,campo4,campo5,campo6"
      */
     public void GuardarComo(String texto)
     {       
@@ -79,7 +80,7 @@ public class fichero {
         }
     }
     
-    
+    //metodo para escribir el fichero .txt
     private boolean escribir(File fichero, String texto)
     {
         boolean res=false;        
@@ -121,7 +122,7 @@ public class fichero {
         return res;
     }
     
-    
+    //metodo de actualizar: sobreescribe el fichero
     public void Actualizar(String texto)
     {
         //Si existe archivo abierto
@@ -129,7 +130,7 @@ public class fichero {
         {
             if ( escribir( this.file ,  texto) )
             {
-                JOptionPane.showMessageDialog(null, "Archivo '" + this.file.getName() + "' actualizado ");
+                JOptionPane.showMessageDialog(null, "ARCHIVO '" + this.file.getName() + "' ACTUALIZADO CORRECTAMENTE  ");
             }                        
         }
         else //sino crear nuevo archivo
